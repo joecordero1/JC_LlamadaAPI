@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JC_LlamadaAPI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <VerticalStackLayout Grid.Column="0">
+                    <Label Text="Latitud"/>
+                    <Entry x:Name ="latitudEntry" Placeholder="latitud"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="Longitud"/>
+                    <Entry x:Name ="longitudEntry" Placeholder="longitud"/>
+                </VerticalStackLayout>
+            </Grid>
+            <Button x:Name="llamarAPI" Text="Clima" Clicked="OnButtonClicked"/>
+            <Label Text="{Binding Estado, StringFormat='Estado Clima: {0}'}" />
+            <Label Text="{Binding Pais, StringFormat='Pais: {0}'}" />
+            <Label Text="{Binding Ciudad, StringFormat='Ciudad: {0}'}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
