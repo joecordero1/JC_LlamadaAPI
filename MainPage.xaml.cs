@@ -20,6 +20,7 @@ public partial class MainPage : ContentPage
 			if(response.IsSuccessStatusCode)
 			{
 				string contenido = response.Content.ReadAsStringAsync().Result;
+				//hasta qui llamo al result dentro de contendio
 			}
 		}
     }
